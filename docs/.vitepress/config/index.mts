@@ -8,5 +8,8 @@ export default defineConfig({
     locales: {
         root: { label: 'English', ...en },
         ru: { label: 'Русский', ...ru },
+    },
+    sitemap: {
+        hostname: 'https://interactivemc.clwn.org'
     }
 })

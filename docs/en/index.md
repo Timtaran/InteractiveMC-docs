@@ -5,6 +5,9 @@ layout: home
 hero:
   name: "InteractiveMC Documentation"
   tagline: Official documentation for players and developers
+  image:
+    src: https://raw.githubusercontent.com/Timtaran/InteractiveMC/refs/heads/master/assets/logo.png
+    alt: InteractiveMC Logo
 
 features:
   - title: Player Guides

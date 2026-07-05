@@ -1,5 +1,5 @@
 import { defineConfig, type DefaultTheme } from 'vitepress'
-import {version} from "./global";
+import { version } from "./global";
 
 export const en = defineConfig({
     lang: 'en-US',
@@ -9,7 +9,21 @@ export const en = defineConfig({
         nav: nav(),
 
         sidebar: {
-            '/guide/': { base: '/guide/', items: sidebarGuide() },
+            '/player/': [
+                {
+                    text: 'Players',
+                    items: [
+                    ]
+                }
+            ],
+
+            '/developer/': [
+                {
+                    text: 'Developers',
+                    items: [
+                    ]
+                }
+            ]
         },
 
         editLink: {
@@ -19,7 +33,7 @@ export const en = defineConfig({
 
         footer: {
             message: 'NOT AN OFFICIAL MINECRAFT WEBSITE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT',
-            copyright: '© 2026 - Timtaran. Published under <a href = "https://github.com/Timtaran/interactivemc-docs/LICENSE">Creative Commons</a> license'
+            copyright: '© 2026 - Timtaran. Published under <a href = "https://github.com/Timtaran/interactivemc-docs/blob/master/LICENSE">Creative Commons</a> license'
         }
     }
 })

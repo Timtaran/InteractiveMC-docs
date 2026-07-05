@@ -1,49 +1,52 @@
-import {defineConfig, type DefaultTheme} from 'vitepress'
-import {version} from "./global";
+import { defineConfig, type DefaultTheme } from 'vitepress'
+import { version } from "./global";
 
 export const ru = defineConfig({
-        lang: 'ru-RU',
-        description: 'Привносим физические взаимодействия в Vivecraft',
+    lang: 'ru-RU',
+    description: 'Привносим физические взаимодействия в Vivecraft',
 
-        themeConfig: {
-            nav: nav(),
+    themeConfig: {
+        nav: nav(),
 
-            sidebar: {
-                '/ru/guide/': {base: '/ru/guide/', items: sidebarGuide()},
-            },
+        sidebar: {
+            '/ru/player/': sidebarPlayer(),
+            '/ru/developer': sidebarDeveloper()
+        },
 
-            editLink: {
-                pattern: 'https://github.com/Timtaran/interactivemc-docs/edit/master/docs/:path',
-                text: 'Редактировать страницу'
-            },
+        editLink: {
+            pattern: 'https://github.com/Timtaran/interactivemc-docs/edit/master/docs/:path',
+            text: 'Редактировать страницу'
+        },
 
-            footer: {
-                message: 'NOT AN OFFICIAL MINECRAFT WEBSITE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT',
-                copyright: '© 2026 - Timtaran. Опубликовано под лицензией <a href = "https://github.com/Timtaran/interactivemc-docs/LICENSE">Creative Commons</a>'
-            },
+        footer: {
+            message: 'NOT AN OFFICIAL MINECRAFT WEBSITE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT',
+            copyright: '© 2026 - Timtaran. Опубликовано под лицензией <a href = "https://github.com/Timtaran/interactivemc-docs/blob/master/LICENSE">Creative Commons</a>'
+        },
 
-            outline: {label: 'Содержание страницы'},
+        outline: { label: 'Содержание страницы' },
 
-            docFooter: {
-                prev: 'Предыдущая страница',
-                next: 'Следующая страница'
-            },
+        docFooter: {
+            prev: 'Предыдущая страница',
+            next: 'Следующая страница'
+        },
 
-            lastUpdated: {
-                text: 'Обновлено'
-            },
+        lastUpdated: {
+            text: 'Обновлено'
+        },
 
-            darkModeSwitchLabel: 'Оформление',
-            lightModeSwitchTitle: 'Переключить на светлую тему',
-            darkModeSwitchTitle: 'Переключить на тёмную тему',
-            sidebarMenuLabel: 'Меню',
-            returnToTopLabel: 'Вернуться к началу',
-            langMenuLabel: 'Изменить язык',
-        }
-    })
+        darkModeSwitchLabel: 'Оформление',
+        lightModeSwitchTitle: 'Переключить на светлую тему',
+        darkModeSwitchTitle: 'Переключить на тёмную тему',
+        sidebarMenuLabel: 'Меню',
+        returnToTopLabel: 'Вернуться к началу',
+        langMenuLabel: 'Изменить язык',
+    }
+})
 
 function nav(): DefaultTheme.NavItem[] {
     return [
+        { text: 'Игроки', link: 'ru/player/' },
+        { text: 'Разработчики', link: 'ru/developer/' },
         {
             text: version,
             items: [
@@ -60,18 +63,37 @@ function nav(): DefaultTheme.NavItem[] {
     ]
 }
 
-function sidebarGuide(): DefaultTheme.SidebarItem[] {
+function sidebarPlayer(): DefaultTheme.SidebarItem[] {
     return [
         {
-            text: 'Введение',
-            collapsed: false,
+            text: 'Игроки',
             items: [
-                {text: 'Что такое VTubeStudio?', link: 'about-vts'},
-                {text: 'Первые шаги', link: 'getting-started'},
+                { text: 'Гайды для игроков', link: '/ru/player' },
+                { text: 'Установка', link: '/ru/player/install' },
+                { text: 'Конфигурация', link: '/ru/player/config' },
+
             ]
-        },
-        // {text: 'Справка по API', base: '/ru/reference/', link: 'site-config'}
+        }
     ]
+}
+
+
+function sidebarDeveloper(): DefaultTheme.SidebarItem[] {
+    return [
+        {
+            text: 'Разработчики',
+            items: [
+                { text: 'Гайды для разработчиков', link: '/ru/developer' },
+                {
+                    text: "Вступление", collapsed: false, items: [
+                        { text: 'Шаблон', link: '/ru/developer/intro/template' },
+                        { text: 'Добавление зависимости', link: '/ru/developer/intro/depend' },
+                    ]
+                }
+            ]
+        }
+    ]
+
 }
 
 export const search: DefaultTheme.AlgoliaSearchOptions['locales'] = {

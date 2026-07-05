@@ -1,5 +1,7 @@
 # Документация для разработчиков
 
-потом
+Эта часть документации посвящена разработке аддонов и внесению вкладов в InteractiveMC.
 
-https://timtaran.github.io/InteractiveMC/
+Воспользуйтесь боковой панелью для навигации по гайдам.
+
+Вы можете изучить Javadoc мода тут: https://timtaran.github.io/InteractiveMC/

@@ -5,6 +5,9 @@ layout: home
 hero:
   name: "Документация InteractiveMC"
   tagline: Официальная документация для игроков и разработчиков
+  image:
+    src: https://raw.githubusercontent.com/Timtaran/InteractiveMC/refs/heads/master/assets/logo.png
+    alt: InteractiveMC Logo
 
 features:
   - title: Гайды для игроков
