@@ -117,4 +117,4 @@ dependencies {
 
 :::
 
-Так же задайте версии игры, interactivemc, velthoric, vivecraft в `gradle.properties`, а также версию LWJGL в соответствии с документацией Vivecraft.
+Так же задайте версии игры, interactivemc, velthoric, vivecraft в `gradle.properties`, а также версию LWJGL в соответствии с [документацией Vivecraft](https://github.com/Vivecraft/VivecraftMod/wiki/Mod-API).
