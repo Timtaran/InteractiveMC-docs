@@ -46,7 +46,7 @@ export const ru = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
     return [
         { text: 'Игроки', link: 'ru/player/' },
-        { text: 'Разработчики', link: 'ru/developer/' },
+        { text: 'Разработчики', link: ' /ru/developer/' },
         {
             text: version,
             items: [
