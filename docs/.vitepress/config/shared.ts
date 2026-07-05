@@ -9,6 +9,8 @@ export const shared = defineConfig({
 
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
 
+  base: '/',
+
   rewrites: {
     'en/:rest*': ':rest*',
   },
@@ -25,5 +27,9 @@ export const shared = defineConfig({
         locales: { ...ruSearch }
       }
     }
+  },
+
+  sitemap: {
+    hostname: 'https://interactivemc.clwn.org'
   }
 })

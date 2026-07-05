@@ -9,7 +9,4 @@ export default defineConfig({
         root: { label: 'English', ...en },
         ru: { label: 'Русский', ...ru },
     },
-    sitemap: {
-        hostname: 'https://interactivemc.clwn.org'
-    }
 })
