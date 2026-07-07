@@ -75,6 +75,7 @@ repositories {
 
 ```kotlin [Kotlin DSL]
 dependencies {
+    modImplementation("dev.isxander:yet-another-config-lib:${rootProject.yacl_version}+${rootProject.minecraft_version}-${loader}")
     modImplementation("net.timtaran.interactivemc:interactivemc-fabric:${rootProject.interactivemc_version}")
     modImplementation("net.xmx.velthoric:velthoric-${rootProject.minecraft_version}-fabric:${rootProject.velthoric_version}")
 
@@ -96,8 +97,9 @@ dependencies {
 
 ```groovy [Groovy DSL]
 dependencies {
+    modImplementation "dev.isxander:yet-another-config-lib:$rootProject.yacl_version+$rootProject.minecraft_version-$loader"
     modImplementation "net.timtaran.interactivemc:interactivemc-fabric:$rootProject.interactivemc_version"
-    modImplementation "net.xmx.velthoric:velthoric-${rootProject.minecraft_version}-fabric:$rootProject.velthoric_version"
+    modImplementation "net.xmx.velthoric:velthoric-$rootProject.minecraft_version-fabric:$rootProject.velthoric_version"
 
     // Vivecraft
     modImplementation "maven.modrinth:vivecraft:1.21.4-1.3.0-fabric"

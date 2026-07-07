@@ -15,6 +15,7 @@
 - [Vivecraft](https://modrinth.com/mod/vivecraft)
 - [Velthoric](https://modrinth.com/mod/velthoric)
 - [Architectury API](https://modrinth.com/mod/architectury-api)
+- [YetAnotherConfigLib](https://modrinth.com/mod/yacl)
 
 2. Переместите скачанные файлы в папку `mods` по пути `%appdata%/.minecraft/mods` (если вы не меняли пути установки вручную.)
 
