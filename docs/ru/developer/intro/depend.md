@@ -76,11 +76,11 @@ repositories {
 ```kotlin [Kotlin DSL]
 dependencies {
     modImplementation("dev.isxander:yet-another-config-lib:${rootProject.yacl_version}+${rootProject.minecraft_version}-${loader}")
-    modImplementation("net.timtaran.interactivemc:interactivemc-fabric:${rootProject.interactivemc_version}")
-    modImplementation("net.xmx.velthoric:velthoric-${rootProject.minecraft_version}-fabric:${rootProject.velthoric_version}")
+    modImplementation("net.timtaran.interactivemc:interactivemc-${loader}:${rootProject.interactivemc_version}")
+    modImplementation("net.xmx.velthoric:velthoric-${rootProject.minecraft_version}-${loader}:${rootProject.velthoric_version}")
 
     // Vivecraft
-    modImplementation("maven.modrinth:vivecraft:1.21.4-1.3.0-fabric")
+    modImplementation("maven.modrinth:vivecraft:${rootProject.vivecraft_version}-${loader}-${loader}")
 
     runtimeOnly("org.lwjgl:lwjgl-openvr:${rootProject.lwjgl_version}")
     runtimeOnly("org.lwjgl:lwjgl-openvr:${rootProject.lwjgl_version}:natives-windows")
@@ -98,11 +98,11 @@ dependencies {
 ```groovy [Groovy DSL]
 dependencies {
     modImplementation "dev.isxander:yet-another-config-lib:$rootProject.yacl_version+$rootProject.minecraft_version-$loader"
-    modImplementation "net.timtaran.interactivemc:interactivemc-fabric:$rootProject.interactivemc_version"
-    modImplementation "net.xmx.velthoric:velthoric-$rootProject.minecraft_version-fabric:$rootProject.velthoric_version"
+    modImplementation "net.timtaran.interactivemc:interactivemc-$loader:$rootProject.interactivemc_version"
+    modImplementation "net.xmx.velthoric:velthoric-$rootProject.minecraft_version-$loader:$rootProject.velthoric_version"
 
     // Vivecraft
-    modImplementation "maven.modrinth:vivecraft:1.21.4-1.3.0-fabric"
+    modImplementation "maven.modrinth:vivecraft:$rootProject.minecraft_version-$rootProject.vivecraft_version-$loader"
 
     runtimeOnly "org.lwjgl:lwjgl-openvr:$rootProject.lwjgl_version"
     runtimeOnly "org.lwjgl:lwjgl-openvr:$rootProject.lwjgl_version:natives-windows"
