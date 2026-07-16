@@ -10,16 +10,15 @@ hero:
     alt: InteractiveMC Logo
 
 features:
-  - title: Player Guides
+  - title: Player guides
     icon: 📚
     details: Are you a player and want to find instructions for installing and configuring the mod?
     link: /player/
-    linkText: Get Started
-  - title: Developer Guides
+    linkText: Get started
+  - title: Developer guides
     icon: 🛠️
     details: Are you a developer and want to learn how to add physical interactions to your mods?
     link: /developer/
-    linkText: Get Started
-
+    linkText: Get started
 ---
 

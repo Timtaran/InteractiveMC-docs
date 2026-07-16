@@ -9,21 +9,8 @@ export const en = defineConfig({
         nav: nav(),
 
         sidebar: {
-            '/player/': [
-                {
-                    text: 'Players',
-                    items: [
-                    ]
-                }
-            ],
-
-            '/developer/': [
-                {
-                    text: 'Developers',
-                    items: [
-                    ]
-                }
-            ]
+            '/player/': sidebarPlayer(),
+            '/developer/': sidebarDeveloper()
         },
 
         editLink: {
@@ -40,6 +27,8 @@ export const en = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
     return [
+        { text: 'Players', link: '/player/' },
+        { text: 'Developers', link: '/developer/' },
         {
             text: version,
             items: [
@@ -56,14 +45,33 @@ function nav(): DefaultTheme.NavItem[] {
     ]
 }
 
-function sidebarGuide(): DefaultTheme.SidebarItem[] {
+function sidebarPlayer(): DefaultTheme.SidebarItem[] {
     return [
         {
-            text: 'Introduction',
-            collapsed: false,
+            text: 'Players',
             items: [
+                { text: 'Player guides', link: '/player' },
+                { text: 'Installation', link: '/player/install' },
+                { text: 'Configuration', link: '/player/config' },
             ]
-        },
-        // { text: 'API Reference', base: '/reference/', link: 'site-config' }
+        }
+    ]
+}
+
+function sidebarDeveloper(): DefaultTheme.SidebarItem[] {
+    return [
+        {
+            text: 'Developers',
+            items: [
+                { text: 'Developer guides', link: '/developer' },
+                {
+                    text: 'Introduction', collapsed: false, items: [
+                        { text: 'Template', link: '/developer/intro/template' },
+                        { text: 'Add a dependency', link: '/developer/intro/depend' },
+                        { text: 'Create a physical body', link: '/developer/intro/creatingbody' },
+                    ]
+                }
+            ]
+        }
     ]
 }
