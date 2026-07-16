@@ -88,6 +88,7 @@ function sidebarDeveloper(): DefaultTheme.SidebarItem[] {
                     text: "Вступление", collapsed: false, items: [
                         { text: 'Шаблон', link: '/ru/developer/intro/template' },
                         { text: 'Добавление зависимости', link: '/ru/developer/intro/depend' },
+                        { text: 'Создание физического тела', link: '/ru/developer/intro/creatingbody' },
                     ]
                 }
             ]
